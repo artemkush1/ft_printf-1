@@ -76,25 +76,23 @@ void	pf_output(t_print *ptr)
 {
 	if (ptr->type == '%')
 		pf_output_esc(ptr);
-	else if (ptr->type == 'c')
+	else if (ptr->type == 'c' || ptr->type == 'C')
 		pf_output_chr(ptr);
-	else if (ptr->type == 's')
+	else if (ptr->type == 's' || ptr->type == 'S')
 		pf_output_str(ptr);
-	else if (ptr->type == 'u')
+	else if (ptr->type == 'u' || ptr->type == 'U')
 		pf_output_u(ptr);
-	else if (ptr->type == 'd')
+	else if (ptr->type == 'd' || ptr->type == 'D')
 		pf_output_d(ptr);
-	else if (ptr->type == 'i')
+	else if (ptr->type == 'i' || ptr->type == 'I')
 		pf_output_d(ptr);
-	else if (ptr->type == 'o')
+	else if (ptr->type == 'o' || ptr->type == 'O')
 		pf_output_o(ptr);
-	else if (ptr->type == 'x')
+	else if (ptr->type == 'x' || ptr->type == 'X')
 		pf_output_x(ptr);
-	else if (ptr->type == 'X')
-		pf_output_x(ptr);
-	else if (ptr->type == 'p')
+	else if (ptr->type == 'p' || ptr->type == 'P')
 		pf_output_p(ptr);
-	else if (ptr->type == 'b')
+	else if (ptr->type == 'b' || ptr->type == 'B')
 		pf_output_b(ptr);
 }
 
